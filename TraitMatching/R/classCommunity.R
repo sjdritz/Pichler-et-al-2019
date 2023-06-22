@@ -167,7 +167,7 @@ createInter = function(impData, z, log){
                      by.y = c("X", "Y")
         )
 
-      if(length(unique(Z_m[,3])) <= 2){
+      if(sum(!is.na(unique(Z_m[,3])) <= 2)){
         XYZ[,ncol(XYZ)] <- make.names(XYZ[,ncol(XYZ)])
         XYZ[XYZ == "X1"] <- "positive"
         XYZ[XYZ == "X0"] <- "negative"
